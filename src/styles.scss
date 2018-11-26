@@ -1,1 +1,325 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.pagination {
+    ul {
+        -webkit-padding-start: 0;
+    }
+    li {
+        display: inline-block;
+        padding: 0 .5rem;
+        vertical-align: middle;
+    }
+    
+    a {
+    	cursor:pointer;
+        &:hover {
+            opacity: 0.5;
+        }
+     }
+    .disabled a {
+        cursor: default;
+        pointer-events: none;
+        color:grey;
+    }
+}
+
+	.halign {
+	  display:inline-box;
+	  align-items: center;
+	  clear:both;
+	}
+
+.blue-icon {
+    color: blue;
+}
+
+.white-icon {
+	color:white;
+	vertical-align: middle;
+    cursor:pointer;
+}
+
+.header {
+    background-color: #081c24;
+    width: 100%;
+    height: 100px;
+    padding-bottom:10px;
+    top:0;
+    
+}
+
+.headerDiv {
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    
+}
+
+.contentResult {
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    margin: 1rem .625rem;
+    padding : 5px 5px 5px 5px;
+}
+article, aside,
+
+#search-box {
+
+	border-style: solid;
+	border-color: rgba(.7,0,1,.1);
+	border-radius: 1em;
+	padding: 0 30px;
+	height: 35px;
+	width:200px;
+	
+}
+
+.seachComp {
+	margin-left: auto;
+	float:right;
+}
+
+.personProfile {
+	overflow:hidden;
+	height:280px;
+}
+
+/* Column Flex */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    border-style: solid;
+    border-color: rgba(.7,0,1,.1);
+    border-radius:1em;
+    height: 400px;
+    overflow:auto;
+    
+    .item {
+        position: relative;
+        margin: 1rem .625rem;
+        text-align: center;
+        width:200px;
+
+        a {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        
+    }
+}
+
+.mat-green {
+	color:green;
+}
+
+.mat-red {
+	color : red;
+}
+
+.loading-shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(34, 43, 49, 0.5);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  
+}
+
+
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 20px;
+    height: auto;
+    background-position: top;
+    background-size: cover;
+    color:white;
+    text-align: left;
+    @media only screen and (min-width: 731px) {
+        min-height: 500px;
+    }
+
+    &--background {
+        .image-rotator {
+            position: absolute;
+            top: 0;
+            left: 30%;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+
+            @media only screen and (min-width: 731px) {
+                background-position: initial;
+            }
+        }
+        
+        .vignette {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 30%;
+            background: black;
+            z-index: 2;
+        
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 100%;
+                bottom: 0;
+                width: 100%;
+                background-image: linear-gradient(to right,black,transparent);
+            }
+        }
+    }
+
+    &__head {
+        display: inherit;
+        z-index: 2;
+
+        .btn-back {
+            border: none;
+            background: transparent;
+            color:white;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: white;
+            text-align: left !important;
+        }
+    }
+    &__body {
+        z-index: 2;
+        .mat {
+        &-green {
+            color: green;
+        }
+        &-red {
+            color: red;
+        }
+        &-yellow {
+            color: yellow;
+        }
+        &-teal {
+            color: teal;
+        }
+        }
+        .movie {
+
+            &--infos {
+                display: flex;
+                align-items: center;
+
+                span {
+                    margin: 0 5px 0 0;
+                }
+                .mat-icon {
+                    width: 20px;
+                    font-size: 20px;
+                }
+            }
+        &--overview {
+            font-weight: 500;
+            text-align: justify;
+        }
+        &--genre {
+            ul {
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                    padding: 0 5px 0 0;
+
+                    &::after {
+                       
+                        
+                    }
+                    &:last-child:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+        &--actions {
+            button {
+                padding: 0;
+            }
+        }
+        }
+    }
+}
+
+
+.movie {
+    &__tab {
+        .movie {
+            &--cast {
+                a.mat-list-item {
+                    &:hover {
+                        background: white;
+                    }
+                }
+                 .mat-list-text {
+                    h3 {
+                        
+                        text-align: left;
+                    }
+                
+                    p {
+                        color: grey;
+                        text-align: left;
+                    }
+                }
+            }
+            &--trailer {
+                margin: 30px 0;
+
+                iframe {
+                    display: block;
+                    margin: .625rem auto;
+                
+                    @media only screen and (max-width: 731px) {
+                        width: 100%;
+                    }
+                }
+            }
+            &--similar {
+                h3 {
+                    color: grey;
+                }
+            }
+        }
+    }
+}
+
+small {
+    padding: 5px;
+}

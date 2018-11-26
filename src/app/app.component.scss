@@ -1,0 +1,43 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.pagination {
+    ul {
+        -webkit-padding-start: 0;
+    }
+    li {
+        display: inline-block;
+        padding: 0 .5rem;
+        vertical-align: middle;
+    }
+    .disabled a {
+        cursor: default;
+        pointer-events: none;
+        color: 'grey';
+    }
+}
+
+/* Column Flex */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border:1;
+    .item {
+        position: relative;
+        margin: 1rem .625rem;
+        width: 200px;
+        text-align: center;
+
+        a {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        .btn-add {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
